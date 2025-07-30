@@ -260,18 +260,4 @@
 # print(mylist)
 
 
-
-
-# myset={"Mango","Banana","Melon","Peach"}
-# # for x in myset:
-# #     print(x)
-
-# for x in range(len(myset)):
-#     print(myset[x])
-
-# set1={1,2,3,4,5}
-# set2={2,5,6,7,8}
-# set1=set1-set2
-# print(set1)
-
     
