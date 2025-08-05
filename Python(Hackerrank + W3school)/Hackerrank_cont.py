@@ -777,19 +777,20 @@ s='muhammad shahzaib Khalid'
 # else:print('False')
 
 ##-------ginortS
+##-----------1
+# s='Sorting1234'
+# final=''
+# result=[]
+# even=sorted([x for x in s if x.isdigit() and int(x)%2==0])
+# odd=sorted([x for x in s if x.isdigit() and int(x)%2!=0])
+# upper=sorted([x for x in s if x.isupper()])
+# lower=sorted([x for x in s if x.islower()])
+# result=lower+upper+odd+even
+# for x in result:
+#     final+=x
+# print(final)
 
-s='Sorting1234'
-final=''
-result=[]
-even=sorted([x for x in s if x.isdigit() and int(x)%2==0])
-odd=sorted([x for x in s if x.isdigit() and int(x)%2!=0])
-upper=sorted([x for x in s if x.isupper()])
-lower=sorted([x for x in s if x.islower()])
-result=lower+upper+odd+even
-for x in result:
-    final+=x
-print(final)
-
+##----------2
 # even=odd=lower=upper=result=final=''
 # for x in s:
 #     if x.isupper():
@@ -804,5 +805,5 @@ print(final)
 # for x in result:
 #     final+=x
 # print(final)
-    
+
 

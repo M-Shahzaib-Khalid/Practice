@@ -319,3 +319,69 @@ checkdict={"Toyota":Toyota}
 #     for kys in inner_info:
 #         print(kys,":",inner_info[kys])
 
+##-----------Arbitrary arguments
+
+# def car(*info):
+#     for x in info:
+#         print(x)
+#     print(info)
+# car('Cheverlet','Camero','Yellow')
+
+# def cars(**infor):
+#     print(infor.values())
+#     print(infor.keys())
+#     print(infor.items())
+
+# cars(brand='Lamborghini',model='Hurracin',color='Black')
+
+##-----------Lambda
+
+# x=lambda a:a+10
+# print(x(5))
+# print(type(x))
+
+# def myfunc(n):
+#   return lambda a : a * n
+# doubler=myfunc(2)
+# print(doubler(5))
+
+
+##------------Class
+
+# class Myclass:
+#     x=5
+
+# p1=Myclass()
+# print(p1.x)
+
+# class First_class:
+#     def __init__(self,first,last):
+#         self.first=first
+#         self.last=last
+#     def __str__(self):
+#         return f'{self.first} {self.last}'
+# p1=First_class('Shahzaib','Khalid')
+# print(p1.first,p1.last)
+# print(p1)
+
+
+# class greet:
+#     def __init__(self,name,lname):
+#         self.name=name
+#         self.lname=lname
+    
+#     def g(self):
+#         print(f'Hello {self.name}, have a Great Day')
+# class weekend(greet):
+#     pass
+
+# w1=weekend('Yasin','Muzammal')
+# w1.g()
+# p1=greet('Shahzaib','Khalid')
+# p1.g()
+# p1.name='Khizar'
+# p1.g()
+# p2=greet('Mujtaba','Khalid')
+# print(p2.name,p2.lname)
+# del p2.lname
+# #print(p2.name,p2.lname)
