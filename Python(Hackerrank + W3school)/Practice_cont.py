@@ -270,25 +270,14 @@ elif "Year" in thisdict:
 
 ##-------------Nested Dict
 
-Toyota={
-    "Sedan":{"Name":"Crown","Model":2025},
-    "SUV":{"Name":"Fortuiner","Model":2025},
-    "Pickup":{"Name":"Tundra","Model":2025}
-}
+# Toyota={
+#     "Sedan":{"Name":"Crown","Model":2025},
+#     "SUV":{"Name":"Fortuiner","Model":2025},
+#     "Pickup":{"Name":"Tundra","Model":2025}
+# }
 
-Hatchback={"Name":"Aqua","Model":2025}
-Coupe={"Name":"Eq","Model":2020}
-
-# print(Toyota.keys())
-# print("-----------------------------")
-# print(Toyota.values())
-# print("-----------------------------")
-# print(Toyota.items())
-
-
-Toyota["Hatchback"]=Hatchback
-Toyota["Coupe"]=Coupe
-
+# Hatchback={"Name":"Aqua","Model":2025}
+# Coupe={"Name":"Eq","Model":2020}
 
 # print(Toyota.keys())
 # print("-----------------------------")
@@ -296,7 +285,18 @@ Toyota["Coupe"]=Coupe
 # print("-----------------------------")
 # print(Toyota.items())
 
-checkdict={"Toyota":Toyota}
+
+# Toyota["Hatchback"]=Hatchback
+# Toyota["Coupe"]=Coupe
+
+
+# print(Toyota.keys())
+# print("-----------------------------")
+# print(Toyota.values())
+# print("-----------------------------")
+# print(Toyota.items())
+
+# checkdict={"Toyota":Toyota}
 # print(checkdict)
 
 
@@ -385,3 +385,35 @@ checkdict={"Toyota":Toyota}
 # print(p2.name,p2.lname)
 # del p2.lname
 # #print(p2.name,p2.lname)
+
+##----------Iter & next
+
+# s='Apple'
+# myit=iter(s)
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+
+# myli=mylist=[1,2,3]
+# mytu=mytuple=('a','b','c')
+# mys=myset={'A','B','C'}
+# myli=iter(myli)
+# mytu=iter(mytu)
+# mys=iter(mys)
+# for _ in range(len(mylist)):
+#     print(next(myli))
+# print('----------------------')
+# for _ in range(len(mytu)):        #error
+#     print(next(mytu))
+# print('----------------------')
+# for _ in range(len(myset)):
+#     print(next(mys))
+
+# mytuple=(1,2,3,4,5)
+# my=iter(mytuple)
+# print(next(my))
+# for x in range(len(mytuple)):
+#     print(x)
+# print(type(mytuple))
