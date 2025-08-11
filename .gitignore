@@ -1,7 +1,7 @@
 # Python virtual environment
 venv/
 Django/venv/
-Bot/venv
+Bot/venv/
 venv
 # Python cache
 __pycache__/
