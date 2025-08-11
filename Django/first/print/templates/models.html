@@ -1,0 +1,16 @@
+{% extends "master.html"%}
+{% block title%}
+Phone Book - Record
+{%endblock%}
+
+{%block content%}
+    <div class="mycard">
+        <h1>MEMBERS</h1>
+        <ul>
+            {%for x in allmembers %}
+                <li onclick="window.location = 'details/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+{%endblock%}
