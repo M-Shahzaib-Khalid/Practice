@@ -27,3 +27,4 @@ def contact(request):
         messages.success(request,'Thank You for contacting me')
         print('Data saved to database')
     return render(request,'home.html')
+

@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    font-size: 3rem;
+    background-color: black;
+    color:white ;
+    flex-flow: column;
+}
+
+nav{
+    padding: 1rem;
+    background-color: #44B78B;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  
+
+}
+section{
+    flex-grow: 1;
+    text-align: left;
+}
+main{
+    flex-grow: 1;
+
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+.p1{
+    font-size: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+    
+}
+a{
+    text-decoration: none;
+    color:#81dbb8
+}
+a:hover{opacity: .85;}
+.b{
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.logout{
+  display: inline-block;
+}
+.logout-button{
+  font-size: 2.5rem;
+  background-color: rgb(0,0,0,0);
+  border: none;
+}
+
+.logout-button:hover{
+  opacity:.85
+}
+/* ---------- Form Wrapper ---------- */
+.form_with_validation {
+  --bg: #ffffff;
+  --fg: #0f172a;          /* slate-900 */
+  --muted: #64748b;       /* slate-500 */
+  --border: #e2e8f0;      /* slate-200 */
+  --ring: #3b82f6;        /* blue-600 */
+  --error: #dc2626;       /* red-600 */
+  --error-bg: #fef2f2;    /* red-50 */
+  --success: #16a34a;     /* green-600 */
+  --success-bg: #f0fdf4;  /* green-50 */
+
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 6px 30px rgba(2, 6, 23, 0.06);
+}
+
+.form_with_validation h1,
+.form_with_validation h2 {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ---------- Field Layout ---------- */
+.form_with_validation .field {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form_with_validation label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form_with_validation .required > label::after,
+.form_with_validation label.required::after {
+  content: " *";
+  color: var(--error);
+  font-weight: 700;
+}
+
+/* ---------- Inputs ---------- */
+.form_with_validation input[type="text"],
+.form_with_validation input[type="email"],
+.form_with_validation input[type="password"],
+.form_with_validation input[type="number"],
+.form_with_validation input[type="tel"],
+.form_with_validation input[type="url"],
+.form_with_validation input[type="date"],
+.form_with_validation input[type="time"],
+.form_with_validation input[type="datetime-local"],
+.form_with_validation select,
+.form_with_validation textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.675rem;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  background: #fff;
+  color: #000; /* <-- Add this line */
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form_with_validation textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form_with_validation input::placeholder,
+.form_with_validation textarea::placeholder {
+  color: #000000; /* slate-400 */
+}
+
+.form_with_validation input:focus,
+.form_with_validation select:focus,
+.form_with_validation textarea:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 20%, transparent);
+}
+
+.form_with_validation input:disabled,
+.form_with_validation select:disabled,
+.form_with_validation textarea:disabled {
+  background: #f8fafc; /* slate-50 */
+  color: #1a1b1c;
+  cursor: not-allowed;
+}
+
+/* ---------- Help Text ---------- */
+.form_with_validation .helptext,
+.form_with_validation small.helptext {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+/* ---------- Django Error Lists ---------- */
+.form_with_validation ul.errorlist {
+  list-style: none;
+  margin: 0.25rem 0 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--error-bg);
+  border-left: 4px solid var(--error);
+  border-radius: 0.5rem;
+}
+
+.form_with_validation ul.errorlist li {
+  margin: 0;
+  padding: 0;
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.form_with_validation ul.errorlist.nonfield {
+  margin-bottom: 1rem;
+}
+
+.form_with_validation .field-error {
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+  color: var(--error);
+}
+
+/* ---------- Validation States ---------- */
+.form_with_validation .is-invalid,
+.form_with_validation [aria-invalid="true"] {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--error) 18%, transparent) !important;
+}
+
+.form_with_validation .is-valid {
+  border-color: var(--success);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--success) 18%, transparent);
+}
+
+/* ---------- Submit Button (centered) ---------- */
+.form_with_validation .form-actions {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.form_with_validation button[type="submit"],
+.form_with_validation input[type="submit"] {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  border: 1px solid var(--ring);
+  background: var(--ring);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .18s ease, transform .08s ease;
+}
+
+.form_with_validation button[type="submit"]:hover,
+.form_with_validation input[type="submit"]:hover {
+  background: color-mix(in srgb, var(--ring) 90%, black);
+}
+
+.form_with_validation button[type="submit"]:active,
+.form_with_validation input[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+.form_with_validation button[type="submit"]:focus-visible,
+.form_with_validation input[type="submit"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 25%, transparent);
+}
+
+/* ---------- Dark Mode ---------- */
+@media (prefers-color-scheme: dark) {
+  .form_with_validation {
+    --bg: #0b1220;
+    --fg: #e5e7eb;
+    --muted: #94a3b8;
+    --border: #1f2937;
+    background: var(--bg);
+    color: var(--fg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  .form_with_validation input,
+  .form_with_validation select,
+  .form_with_validation textarea {
+    background: #0f172a;
+    color: var(--fg);
+    border-color: var(--border);
+  }
+
+  .form_with_validation button[type="submit"],
+  .form_with_validation input[type="submit"] {
+    background: var(--ring);
+    border-color: var(--ring);
+    color: #fff;
+  }
+}
+
+/* --- Fix for n8n Chat Widget font & alignment ---*/
+#n8n-chat,
+#n8n-chat * {
+  font-size: revert;
+  font-size: 14px !important;     /* restore normal text size */
+  line-height: 1.4 !important;    /* keep readability */
+  margin: initial !important;
+  font-family: system-ui, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+/* Force n8n chat widget messages into chat bubble style */
+#n8n-chat .n8n-chat-message {
+  max-width: 70%;
+  padding: 8px 12px;
+  margin: 6px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* User messages on right */
+#n8n-chat .n8n-chat-message--user {
+  background: #3B82F6;   /* blue bubble */
+  color: #fff;
+  margin-left: auto;     /* push to right */
+  text-align: right;
+}
+
+/* Bot messages on left */
+#n8n-chat .n8n-chat-message--bot {
+  background: #e5e7eb;   /* gray bubble */
+  color: #000;
+  margin-right: auto;    /* push to left */
+  text-align: left;
+}
+

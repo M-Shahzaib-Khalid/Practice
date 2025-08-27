@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{%block title%}
+    USER LOGIN
+{%endblock%}
+{%block content%}
+    
+    <h1>USER LOGIN</h1>
+    <section>
+        <form class="form_with_validation" action=" " method="post">
+            {% csrf_token %}
+            {{form}}
+            {% if request.GET.next%}
+                <input type='hidden' name='next' value='{{request.GET.next}}'/>
+                {% endif %}
+            <div class="form-actions">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    <p class="b">Back to <a href='/'>Home</a> page.</p>
+    </section>
+{%endblock%}

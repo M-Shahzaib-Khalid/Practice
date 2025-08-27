@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Django app
+        {% endblock %}
+    </title>
+    <script src="{%static 'js/main.js'%}"defer></script> 
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home'%}">
+            <span role="img" aria-label="Home" title="Home">🏠</span>
+        </a> | 
+        <a href="{% url 'about'%}"><span role="img" aria-label="About" title="About">😎</span></a> | 
+        <a href="{% url 'Dave:post'%}"><span role="img" aria-label="Post" title="Post">📰</span></a> | 
+
+        {% if user.is_authenticated%}
+            <a href="{% url 'Dave:new_post'%}"><span role="img" aria-label="New post" title="New post">🆕</span></a> | 
+            <form class="logout" action="{% url 'register:logout'%}" method='post'>
+                {%csrf_token%}
+                <button class="logout-button" aria-label="User Logout" title='User Logout'>👋</button>
+            </form>
+        {%else%}
+            <a href="{% url 'register:new'%}"><span role="img" aria-label="Registration" title="Registration">🚀 </span></a> | 
+            <a href="{% url 'register:login'%}"><span role="img" aria-label="Login" title="Login">🔐</span></a> 
+        {%endif%}
+    </nav>
+    <main>
+        {%block content%}
+        {%endblock%}
+
+    </main>
+{% include "chatbot.html" %}
+</body>
+</html>

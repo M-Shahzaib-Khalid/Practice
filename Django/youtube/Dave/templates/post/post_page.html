@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{%block title%}
+    {{ppost.title }}
+{%endblock%}
+{%block content%}
+    <section>
+        <img src="{{ppost.banner.url}}" alt="">
+        <h1>{{ppost.title }}</h1>
+        <p class="p1">{{ppost.date}}</p>
+        <p class="p1">{{ppost.body}}</p>
+    </section>
+{%endblock%}

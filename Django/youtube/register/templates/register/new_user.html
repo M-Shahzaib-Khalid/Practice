@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{%block title%}
+    REGISTER
+{%endblock%}
+{%block content%}
+    
+    <h1>REGISTER NEW USER</h1>
+    <section>
+        <form class="form_with_validation" action="/register/new_user/" method="post">
+            {% csrf_token %}
+            {{form}}
+              <div class="form-actions">
+    <button type="submit">Submit</button>
+  </div>
+        </form>
+    <p class="b">Back to <a href='/'>Home</a> page.</p>
+    </section>
+{%endblock%}
